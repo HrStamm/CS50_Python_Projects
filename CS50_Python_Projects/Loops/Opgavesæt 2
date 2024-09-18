@@ -1,0 +1,77 @@
+def kamel():
+    camelcase = input("Camel case: ")
+    print("Snake case: ", end="")
+
+    for camel in camelcase: 
+        if camel.islower():
+            print(camel, end="")
+        else:
+            print("_" + camel.lower(), end="")
+    print("")
+
+
+# cola maskine der kun tager 5, 10 og 25 kr. 
+def Coca_Cola():
+    print("Amount due: 50 ")
+    
+    total = 50
+
+    # Først sørger den for at useren kun kan skrive integers med try, except, else. 
+    # Dernæst sørger vi for at kun de valgte mønter kan tages af maskinen
+    # hvorefter når vores total <0 bliver loopet ødelagt og vores amount owed bliver opgjort
+    while True:
+        try:
+            coin = int(input("Insert coin: "))
+            if total > 0:
+                if coin == 5 or coin == 10 or coin == 25:
+                    print("Amount remaning:", total - coin) 
+                    total = total - coin
+            if total <= 0:
+                print("Amount owed", total)
+                break
+        except ValueError:
+            print("That is not a number")
+        
+
+
+
+# just setting up my twttr
+# en bot der tager din string, fjerner alle vokalerne og printer dem:
+def Twitter():
+    string = input("noget: ")
+    vowels = ["a", "e", "y", "u", "i", "o", "A", "E", "Y", "U", "I", "O"]
+
+    # laver et loop der tjekker hvert bogstav eller tal om det indeholder en vokal
+    # hvis den gør det udskifter den vokalen med "" dvs ingenting, og printer resten af inputtet færdigt
+    for charachters in string:
+        if charachters in vowels:
+            print(charachters.replace(charachters, ""), end="")
+        else:
+            print (charachters, end="")
+    print(" ")
+
+
+# Nutrition Facts
+# Giver mig kalorieantallet for en frugt ud fra en liste
+def Nutrition():
+    while True:
+        Text = input("Which Fruit? ").lower()
+        Fruit = {
+        "apple": "130",
+        "avocado": "50",
+        "banana": "110",
+        "cantaloupe": "50",
+        "grapefruit": "60",
+        "grapes": "90",
+        "honeydew melon": "50",
+        "kiwifruit": "90",
+        "pineapple": "50",
+        "watermelon": "80",
+         }
+        if Text in Fruit:
+            print(Fruit[Text])
+            break
+        else:
+            print("sorry i didn't get that, try again")
+
+

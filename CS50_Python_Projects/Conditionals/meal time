@@ -1,0 +1,28 @@
+# Breakfast between 7:00 and 8:00
+# Lunch between 12:00 and 13:00
+# Dinner between 18:00 and 19:00
+# Assignment: Design a function which tells you when to eat compared to the users time input
+
+def main():
+    time = input("what time is it? ")
+    if 7 <= convert(time) <= 8:
+        print("Breakfast time")
+    elif 12 <= convert(time) <= 13:
+        print("Lunch Time")
+    elif 18 <= convert(time) <= 19:
+        print ("Dinner time")
+    else:
+        print("No eating now")
+
+# vigtigt at min userdefined function står udenfor main function da den skal bruges i main.
+def convert(time):
+        hours, minutes = time.split(":")
+        # dividere minutter med treds for at få det i decimaltal
+        a = float(hours)
+        b = float(minutes)/60
+        TimeFloat = a+b
+        return TimeFloat 
+
+    
+main()
+

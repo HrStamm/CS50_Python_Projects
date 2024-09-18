@@ -1,0 +1,24 @@
+def main():
+    # splitter mine tre variable således at jeg kan skrive både x, y og z i et input
+    ligning = input("Giv mig et matematisk udtryk: ")
+    x, y, z = ligning.split(" ",3)
+
+    # laver dem om til floats så de bruges som tal for computeren:
+    a = float(x)
+    b = float(z)
+
+    # mine conditionals:
+    if y == "+":
+        print(a+b)
+    elif y == "-":
+        print(a-b)
+    elif y == "*":
+        print(a*b)
+    elif y == "/":
+        print(a/b)
+    else:
+        print("I could'nt understand you, you need to use either plus, minus, times or divide")
+    
+main()
+
+
