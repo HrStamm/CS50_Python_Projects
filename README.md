@@ -12,5 +12,6 @@ The course focuses on teaching the fundamentals of programming using Python, cov
 
 Projects Included:
 Problem Sets: Solutions to various coding challenges that reinforce core concepts.
+
 Final Project: A custom Python application built as part of the course’s final requirement.
 Feel free to explore the code and projects, and don't hesitate to reach out with feedback
